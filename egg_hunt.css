@@ -1,0 +1,282 @@
+.egg {
+    cursor: pointer;
+    /* Add any additional styling needed for the eggs */
+}
+
+.egg img {
+    display: block;  /* Ensures the image takes up the full size of its container */
+    width: 50px;     /* Example width, adjust as needed */
+    height: auto;    /* Maintain aspect ratio */
+    /* Add any additional styling needed for the images */
+}
+
+
+/* CSS FOR THE EGG PAGE */
+
+.egg_display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.display-box {
+    background-color: #f5f5f5;
+    margin: 10px;
+    padding-top: 0;
+    padding-bottom: 17px;
+    padding-left: 17px;
+    padding-right: 17px;
+    width: inherit;
+    height: auto;
+    overflow: auto;
+    border-radius: 24px;
+    text-align: center;
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.hint-button:hover {
+    animation: wiggle 1.5s infinite;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    75% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+#progress-indicator {
+    position: relative;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    height: 3em;
+    display: flex;
+    align-items: center;
+}
+
+.progress-step {
+    position: absolute;
+    width: 0.14em; /* Adjust width as needed */
+    height: 82%;
+    background-color: #09b541; /* Adjust color as needed */
+    z-index: 0;
+    margin-top: 0.1em !important;
+}
+
+#progress-bar {
+    position: absolute;
+    height: 80%;
+    background-color: rgb(115, 244, 115);
+    transition: width 0.5s ease-in-out;
+    border-radius: 20px;
+    z-index: 0;
+    margin: 2px;
+    margin-top: 0.27em !important;
+}
+
+
+#progress-text {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    padding-top: 0.5em;
+}
+
+
+#claim-prize-button {
+    display: block;
+    margin: 1.3em auto;
+}
+
+#overlay-egg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark, semi-transparent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent scrolling */
+    z-index: 1000;
+}
+
+.fadeIn {
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.popup-content_egg-redeem {
+
+}
+
+#popup-egg {
+    position: relative; /* Relative positioning for the "X" button */
+    padding: 20px;
+    background-color: rgba(240, 173, 78, 0.7); /* Semi-transparent */
+    color: #fff;
+    border-radius: 5px;
+    text-align: center; /* Center the text and buttons */
+    width: max-content;
+}
+
+.egg-found {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 2.2em;
+    margin-left: 1em;
+    position: absolute;
+    rotate: -20deg;
+    z-index: 3;
+    color: #fff;
+}
+
+.overlay-egg_box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+        z-index: 1; /* Ensure the overlay is above other content */
+}
+
+#overlay, #popup-egg {
+    transition: opacity 0.5s ease-in-out;
+}
+
+#egg-exit-button {
+    position: absolute;
+    top: 0.2em;
+    right: 0.2em;
+    border-radius: 50%;
+	padding: 15px !important;
+}
+
+#coupon-text {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+.golden-info {
+    font-size: 3.2em;
+    font-weight: bold;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.golden-display-box {
+    background-color: #f5f5f5;
+    margin: 10px;
+    padding-top: 0;
+    padding-bottom: 17px;
+    padding-left: 17px;
+    padding-right: 17px;
+    width: inherit;
+    height: auto;
+    overflow: auto;
+    border-radius: 24px;
+    text-align: center;
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.golden-egg-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+    max-width: 265px;
+    margin: 0 auto;
+    margin-top: 2em;
+}
+
+.golden-egg-image {
+    display: block;
+    width: 13em;
+    height: auto;
+}
+
+.gold-egg-found {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 2.2em;
+    margin-left: 1em;
+    position: absolute;
+    rotate: -20deg;
+    z-index: 3;
+    color: #fff;
+}
+
+.golden-egg-info {
+    font-size: 2em;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.golden-giftcard {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    text-align: center;
+    background-color: #ffc068;
+    margin-top: 1em;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 1.2em;
+}
+
+#claim-prize-button {
+    display: block;
+    margin: 1.3em auto;
+    font-size: 1.4em;
+}
+
+.hint-release {
+    font-size: 1.2em;
+    margin-bottom: 0.3em !important;
+}
+
+.egg-id {
+    font-size: 1.2em;
+    margin-bottom: 0.3em !important;
+    font-weight: bold;
+}
+
